@@ -80,13 +80,13 @@ namespace TsvLoader
         {
             LoadParam param = new LoadParam();
 
-            param.FilePath = ConfigurationManager.ConnectionStrings["filePath"].ToString();
+            param.FilePath = ConfigurationManager.AppSettings["filePath"].ToString();
 
-            param.FileEncode = ConfigurationManager.ConnectionStrings["fileEncode"].ToString();
+            param.FileEncode = ConfigurationManager.AppSettings["fileEncode"].ToString();
 
             param.HasTableName = !ConfigurationManager.AppSettings["hasTableName"].ToString().Equals("0");
 
-            param.TableName = ConfigurationManager.ConnectionStrings["tableName"].ToString();
+            param.TableName = ConfigurationManager.AppSettings["tableName"].ToString();
 
             return param;
         }
